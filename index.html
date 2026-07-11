@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Touch | Luxury Nails & Homemade Pies</title>
+    <meta name="description" content="Velvet Touch offers premium nail services and fresh homemade chicken pies with WhatsApp booking and ordering.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand">Velvet Touch</a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#booking">Book</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#booking" class="button button-primary">Book Now</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="eyebrow">Luxury Beauty & Homemade Taste</span>
+                <h1>Velvet Touch — premium nail services with delicious chicken pies.</h1>
+                <p>Enjoy polished nails and freshly baked pies in one welcoming experience. Browse services, book an appointment, or place a pie order via WhatsApp.</p>
+                <div class="hero-actions">
+                    <a href="#booking" class="button button-primary">Book Appointment</a>
+                    <a href="#order" class="button button-secondary">Order Chicken Pie</a>
+                </div>
+                <div class="hero-highlights">
+                    <div>
+                        <strong>10 slots/day</strong>
+                        <span>Limited appointment availability</span>
+                    </div>
+                    <div>
+                        <strong>Dual WhatsApp</strong>
+                        <span>Messages will be sent directly</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-box">
+                <img src="image/chicken%20pie.jpg" alt="Chicken pie" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <section id="about" class="about-section">
+            <div class="container about-grid">
+                <div class="about-copy card">
+                    <span class="section-label">About Us</span>
+                    <h2>Stylish nails and savory pies, all in one place.</h2>
+                    <p>Velvet Touch blends professional nail care with homemade chicken pie comfort. Our service is tailored to help you feel beautiful and satisfied.</p>
+                    <ul class="about-list">
+                        <li>Expert manicures, pedicures, and nail art</li>
+                        <li>Fresh, quality chicken pies baked daily</li>
+                        <li>Fast WhatsApp booking and ordering</li>
+                    </ul>
+                </div>
+                <div class="gallery-card card">
+                    <div class="about-media-grid">
+                        <div class="slideshow-box">
+                            <div class="slide active"><img src="image/nails%20png.jpg" alt="Nail service 1"></div>
+                            <div class="slide"><img src="image/nails%20png%202.jpg" alt="Nail service 2"></div>
+                            <div class="slide"><img src="image/nails%20png%203.jpg" alt="Nail service 3"></div>
+                            <div class="slide"><img src="image/nails%20png%204.jpg" alt="Nail service 4"></div>
+                            <div class="slideshow-controls">
+                                <button type="button" class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</button>
+                                <button type="button" class="next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</button>
+                            </div>
+                            <div class="slideshow-dots">
+                                <button type="button" class="dot active" onclick="currentSlide(1)" aria-label="Show slide 1"></button>
+                                <button type="button" class="dot" onclick="currentSlide(2)" aria-label="Show slide 2"></button>
+                                <button type="button" class="dot" onclick="currentSlide(3)" aria-label="Show slide 3"></button>
+                                <button type="button" class="dot" onclick="currentSlide(4)" aria-label="Show slide 4"></button>
+                            </div>
+                        </div>
+                        <div class="pie-box fixed-box">
+                            <div class="pie-label">Chicken Pie</div>
+                            <img src="image/chicken%20pie.jpg" alt="Chicken pie" class="pie-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+            <li>
+                <h3>Nail Services</h3>
+                <ul>
+                    <li>Nail polishing</li>
+                    <li>Gel application</li>
+                    <li>Nail art designs</li>
+                    <li>Manicures</li>
+                    <li>Pedicures</li>
+                    <li>Other beauty treatments tailored to your style</li>
+                </ul>
+                <div id="booking" class="booking-widget">
+                    <h4>Book an appointment</h4>
+
+                    <label for="apptDate">Date:</label>
+                    <input id="apptDate" type="date">
+
+                    <label for="slotSelect">Time slot:</label>
+                    <select id="slotSelect"><option value="">Select a date</option></select>
+
+                    <label for="clientName">Your name (optional):</label>
+                    <input id="clientName" type="text" placeholder="Name">
+
+                    <button onclick="bookAppointment()">Book via WhatsApp</button>
+
+                    <div id="appointmentSummary" class="appointment-summary" aria-live="polite">No appointment booked.</div>
+                </div>
+            </li>
+            <li>
+                <h3>Chicken Pies</h3>
+                <ul>
+                    <li>Freshly baked chicken pies</li>
+                    <li>Made from quality ingredients</li>
+                    <li>Perfect for snacks, events, meetings, and special occasions</li>
+                </ul>
+
+                <div class="order-widget">
+                    <h4>Place an order</h4>
+                    <label for="pieQty">Quantity:</label>
+                    <input id="pieQty" type="number" min="1" value="1">
+
+                    <label for="pieNotes">Notes (optional):</label>
+                    <textarea id="pieNotes" rows="2" placeholder="E.g. extra spicy"></textarea>
+
+                    <button onclick="orderWhatsApp()">Order on WhatsApp</button>
+
+                    <div id="order" aria-live="polite" class="order-summary">No order yet.</div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>FAQ</h2>
+            <div class="faq-grid">
+                <div class="faq-item card">
+                    <h3>How do I book?</h3>
+                    <p>Select a date, choose a time slot, then tap the WhatsApp booking button.</p>
+                </div>
+                <div class="faq-item card">
+                    <h3>Can I order pie online?</h3>
+                    <p>Yes, place your order using the chicken pie form and it will open WhatsApp for confirmation.</p>
+                </div>
+                <div class="faq-item card">
+                    <h3>Where are you located?</h3>
+                    <p>Velvet Touch is at LUANAR, Bunda campus, with quick WhatsApp support for inquiries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="review-section">
+        <h2>Private Feedback</h2>
+        <p>This feedback will be sent directly to the owner via WhatsApp. It is not shown publicly on the website.</p>
+        <textarea id="reviewText" rows="4" placeholder="Write your review or feedback here"></textarea>
+        <button onclick="submitReview()">Send Review to Owner</button>
+        <div id="reviewConfirmation" class="review-confirmation"></div>
+    </section>
+
+    <section id="contact" class="contact-images">
+        <div>
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="mailto:velvettouch@gmail.com" method="GET">
+                <label for="contactName">Your Name</label>
+                <input id="contactName" type="text" name="name" placeholder="Your Name" required>
+                <label for="contactEmail">Your Email</label>
+                <input id="contactEmail" type="email" name="email" placeholder="Your Email" required>
+                <label for="contactMessage">Your Message</label>
+                <textarea id="contactMessage" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <p>Phone: 0880839099 | 0883199259 | 0989227222</p>
+                <p>Email: velvettouch@gmail.com</p>
+                <p>Location: LUANAR, Bunda campus</p>
+            </div>
+        </div>
+        <div class="contact-image-wrap">
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Why Choose Velvet Touch</h2>
+        <ul>
+            <li>Professional and friendly services</li>
+            <li>High quality nail designs and treatments</li>
+            <li>Fresh and delicious chicken pies</li>
+            <li>Affordable prices</li>
+            <li>Customer satisfaction guaranteed</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Velvet Touch. Beauty. Style & Taste.</p>
+    </footer>
+    <script src="script.js" class="jsscript"></script>
+</body>
+</html>
