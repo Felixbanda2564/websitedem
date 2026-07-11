@@ -2,7 +2,7 @@ function showMessage(){
     alert('Welcome to Velvet Touch - Beauty at your fingertips, Taste every Bite');
 }
 
-const WA_PHONES = ['0883199259', '0880839099'];
+const WA_PHONES = ['+265883199259', '+265880839099'];
 
 function openWhatsAppChats(message){
     WA_PHONES.forEach((phone, index) => {
